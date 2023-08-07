@@ -1,4 +1,20 @@
 {
+  "name": "automation-cypress",
+  "version": "0.0.1",
+  "description": "Boilerplate for automation framework based on Cypress",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tech-stack-dev/automation-cypress.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tech-stack-dev/automation-cypress/issues"
+  },
+  "homepage": "https://github.com/tech-stack-dev/automation-cypress#readme",
   "devDependencies": {
     "typescript": "^5.1.6"
   },
