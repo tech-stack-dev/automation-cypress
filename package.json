@@ -8,7 +8,7 @@
     "lint-fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "pretty": "prettier --config .prettierrc . --write",
     "precommit": "npm run lint",
-    "prepush": "test:all:headless",
+    "prepush": "npm run test:all:headless",
     "test:all": "npx cypress run -b chrome --headed",
     "test:all:headless": "npx cypress run -b chrome --headless"
   },
