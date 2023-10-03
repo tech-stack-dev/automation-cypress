@@ -1,6 +1,8 @@
 import MainPage from '../../pages/mainPage';
 import TopMenu from '../../pages/topMenu';
 
+const asd = '';
+
 describe('Top menu tests', () => {
   beforeEach(() => {
     cy.visit(Cypress.env('baseUrl'));
