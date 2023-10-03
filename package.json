@@ -4,7 +4,10 @@
   "description": "Boilerplate for automation framework based on Cypress",
   "main": "index.js",
   "scripts": {
-    "test:all": "npx cypress run -b chrome --headed" 
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint-fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "pretty": "prettier --config .prettierrc . --write",
+    "test:all": "npx cypress run -b chrome --headed"
   },
   "repository": {
     "type": "git",
@@ -18,9 +21,24 @@
   },
   "homepage": "https://github.com/tech-stack-dev/automation-cypress#readme",
   "devDependencies": {
-    "typescript": "^5.1.6"
+    "@typescript-eslint/eslint-plugin": "^6.7.3",
+    "@typescript-eslint/parser": "^6.7.3",
+    "eslint": "^8.50.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^17.1.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-cypress": "^2.15.1",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^3.0.3"
   },
   "dependencies": {
-    "cypress": "^12.17.3"
+    "cypress": "^13.3.0",
+    "typescript": "^5.2.2"
   }
 }

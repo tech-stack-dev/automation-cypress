@@ -1,3 +1,3 @@
 export default {
-    MENU_BUTTON: '[data-id=HeaderOpenMenuButton-HeaderOpenMenuButton]'
-}
+  MENU_BUTTON: '[data-id=HeaderOpenMenuButton-HeaderOpenMenuButton]'
+};

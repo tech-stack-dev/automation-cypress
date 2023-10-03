@@ -1,5 +1,5 @@
-import locators from "../locators";
+import locators from '../locators';
 
 export default class MainPage {
-    static openTopMenu = () => cy.get(locators.mainPageLocators.MENU_BUTTON).should('be.visible').click();
-} 
+  static openTopMenu = () => cy.get(locators.mainPageLocators.MENU_BUTTON).should('be.visible').click();
+}
