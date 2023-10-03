@@ -1,11 +1,10 @@
 import { defineConfig } from 'cypress';
 import fs from 'fs';
-
-const requirements = require('./environments.json');
+import environments from './environments.json'
 
 export default defineConfig({
   env: {
-    baseUrl: requirements.Staging
+    baseUrl: environments.Staging
   },
   viewportWidth: 1920,
   viewportHeight: 1080,
