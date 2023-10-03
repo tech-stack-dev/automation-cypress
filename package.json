@@ -8,7 +8,9 @@
     "lint-fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "pretty": "prettier --config .prettierrc . --write",
     "precommit": "npm run lint",
-    "test:all": "npx cypress run -b chrome --headed"
+    "prepush": "test:all:headless",
+    "test:all": "npx cypress run -b chrome --headed",
+    "test:all:headless": "npx cypress run -b chrome --headless"
   },
   "repository": {
     "type": "git",
