@@ -1,6 +1,6 @@
 import { defineConfig } from 'cypress';
 import fs from 'fs';
-import environments from './environments.json'
+import environments from './environments.json';
 
 export default defineConfig({
   env: {
