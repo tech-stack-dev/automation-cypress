@@ -3,13 +3,15 @@
   "version": "0.0.1",
   "description": "Boilerplate for automation framework based on Cypress",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test:all": "npx cypress run -b chrome --headed" 
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tech-stack-dev/automation-cypress.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "TechStack ltd.",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/tech-stack-dev/automation-cypress/issues"
