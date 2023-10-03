@@ -8,14 +8,18 @@ export default class TopMenu {
     CONTACT_US: 'Contact Us'
   };
 
-  static closeMenu = () => cy.get(locators.menuLocators.CLOSE_BUTTON).first().click();
-
-  static expandCollapseIndustriesTab = () => cy.get(locators.menuLocators.INDUSTRIES_TAB).click();
-
-  static expandCollapseTab = (tabName: string) => cy.get(locators.menuLocators.GENERIC_TAB).filter(`:contains("${tabName}")`).should('have.length', 1).click();
+  static expandCollapseTab = (tabName: string) =>
+    cy
+      .get(locators.menuLocators.FULL.GENERIC_TOP_MENU_ITEM)
+      .filter(`:contains("${tabName}")`)
+      .should('have.length', 1)
+      .click()
+      .get(locators.menuLocators.FULL.SUBMENU_ITEMS_CONTAINER);
 
   static clickMenuItem = (itemName: string) =>
-    cy.get(locators.menuLocators.GENERIC_MENU_ITEM).filter(`:contains("${itemName}")`).should('have.length', 1).click();
+    cy.get(locators.menuLocators.FULL.GENERIC_SUB_MENU_ITEM).filter(`:contains("${itemName}")`).should('have.length', 1).click();
 
-  static navigate = (tabName: string, itemName: string) => this.expandCollapseTab(tabName).within(() => this.clickMenuItem(itemName));
+  static navigate = (tabName: string, itemName: string) => {
+    this.expandCollapseTab(tabName).within(() => this.clickMenuItem(itemName));
+  };
 }
