@@ -9,8 +9,8 @@
     "pretty": "prettier --config .prettierrc . --write",
     "precommit": "npm run lint",
     "prepush": "npm run test:all:headless",
-    "test:all": "npx cypress run -b chrome --headed",
-    "test:all:headless": "npx cypress run -b chrome --headless"
+    "test:all": "cypress run -b chrome --headed",
+    "test:all:headless": "cypress run -b chrome --headless"
   },
   "repository": {
     "type": "git",
