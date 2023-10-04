@@ -16,10 +16,16 @@ export default class TopMenu {
       .click()
       .get(locators.menuLocators.FULL.SUBMENU_ITEMS_CONTAINER);
 
-  static clickMenuItem = (itemName: string) =>
-    cy.get(locators.menuLocators.FULL.GENERIC_SUB_MENU_ITEM).filter(`:contains("${itemName}")`).should('have.length', 1).click();
+  static #getSubMenuItem = (itemName: string) =>
+    cy.get(locators.menuLocators.FULL.GENERIC_SUB_MENU_ITEM).filter(`:contains("${itemName}")`).should('have.length', 1);
+
+  static clickMenuSubItem = (itemName: string) => this.#getSubMenuItem(itemName).click();
 
   static navigate = (tabName: string, itemName: string) => {
-    this.expandCollapseTab(tabName).within(() => this.clickMenuItem(itemName));
+    this.expandCollapseTab(tabName).within(() => this.clickMenuSubItem(itemName));
   };
+
+  static verifySubItemsDisplayed(...items: string[]) {
+    cy.get(locators.menuLocators.FULL.SUBMENU_ITEMS_CONTAINER).within(() => items.forEach((item) => this.#getSubMenuItem(item).should('be.visible')));
+  }
 }
