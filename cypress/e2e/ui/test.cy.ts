@@ -13,6 +13,6 @@ describe('Top menu tests', () => {
   });
 
   it('Menu navigation test', () => {
-    TopMenu.navigate(TopMenu.tabs.SERVICES, 'AI Development11');
+    TopMenu.navigate(TopMenu.tabs.SERVICES, 'AI Development');
   });
 });
