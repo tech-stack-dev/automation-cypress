@@ -1,0 +1,36 @@
+name: Cypress E2E tests
+
+on:
+  push:
+    branches:    
+      - '*'
+
+jobs:
+  tests_e2e:
+    name: Cypress end-to-end tests
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm i
+
+      - name: Run UI tests
+        shell: bash
+        run: npm run test:all:headless
+
+      - uses: actions/upload-artifact@v3
+        name: Upload video files
+        if: always()
+        with:
+          name: test-report-video
+          path: cypress/videos/
+          retention-days: 10
