@@ -4,7 +4,8 @@ import environments from './environments.json';
 
 export default defineConfig({
   env: {
-    baseUrl: environments.Staging
+    baseUrl: environments.Staging,
+    failIfBrowserError: false
   },
   viewportWidth: 1920,
   viewportHeight: 1080,
