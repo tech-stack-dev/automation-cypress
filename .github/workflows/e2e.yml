@@ -34,3 +34,16 @@ jobs:
           name: test-report-video
           path: cypress/videos/
           retention-days: 10
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: always()
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: cypress/videos
+          publish_branch: gh-pages
+
+      - name: Display Report Link
+        if: always()
+        run: |
+          echo "::warning ::Tests execution report: https://tech-stack-dev.github.io/automation-cypress/"
