@@ -4,6 +4,7 @@ export default class AiDevelopmentPage {
   static #PAGE_TITLE = 'AI Development Services';
 
   static verifyIsOpened = () =>
+    // example of using validations with a custom logic using should
     cy.get(locators.common.PAGE_TITLE).should(($title) =>
       expect(
         $title

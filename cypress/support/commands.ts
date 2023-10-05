@@ -35,3 +35,5 @@
 //     }
 //   }
 // }
+
+Cypress.Commands.add('getVisibleByText', (selector, text, options) => cy.get(selector, options).filter(':visible').filter(`:contains("${text}")`));
