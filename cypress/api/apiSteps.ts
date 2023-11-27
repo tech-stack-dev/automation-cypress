@@ -17,6 +17,21 @@ export default class ApiSteps {
     });
   };
 
+  static executePostRequest = (url: string, body: any) => {
+    const options = {
+      method: 'POST',
+      url: this.#composeUrl(url),
+      body: body,
+      headers: {
+        accept: this.#accept
+      }
+    };
+
+    return cy.request(options).then((response) => {
+      this.responseVariable = response;
+    });
+  };
+
   static checkPropertyValue = (property: string, expectedValue: string) =>
     cy.wrap(null).then(() => {
       const propertyPath = property.split('/');
