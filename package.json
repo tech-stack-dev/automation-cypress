@@ -11,7 +11,8 @@
     "prepush": "npm run test:all:headless",
     "cypress:open": "cypress open",
     "test:all": "cypress run -b chrome --headed",
-    "test:all:headless": "cypress run -b chrome --headless"
+    "test:all:headless": "cypress run -b chrome --headless",
+    "test:api": "cypress run -b chrome --headed --spec **/e2e/api/*"
   },
   "repository": {
     "type": "git",
