@@ -12,7 +12,10 @@
     "cypress:open": "cypress open",
     "test:all": "cypress run -b chrome --headed",
     "test:all:headless": "cypress run -b chrome --headless",
-    "test:api": "cypress run -b chrome --headed --spec **/e2e/api/*"
+    "test:ui": "cypress run -b chrome --headed --spec **/e2e/ui/*",
+    "test:ui:headless": "cypress run -b chrome --headless --spec **/e2e/ui/*",
+    "test:api": "cypress run -b chrome --headed --spec **/e2e/api/*",
+    "test:api:headless": "cypress run -b chrome --headless --spec **/e2e/api/*"
   },
   "repository": {
     "type": "git",
