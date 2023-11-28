@@ -5,7 +5,8 @@ export default class AiDevelopmentPage {
 
   static verifyIsOpened = () =>
     // example of using validations with a custom logic using should
-    cy.get(locators.common.PAGE_TITLE).should(($title) =>
+    // example of using custom getByDataId method
+    cy.getByDataId(locators.common.PAGE_TITLE_DATAID).should(($title) =>
       expect(
         $title
           .text()

@@ -37,3 +37,5 @@
 // }
 
 Cypress.Commands.add('getVisibleByText', (selector, text, options) => cy.get(selector, options).filter(':visible').filter(`:contains("${text}")`));
+
+Cypress.Commands.add('getByDataId', (dataId, options) => cy.get(`[data-id='${dataId}']`, options));

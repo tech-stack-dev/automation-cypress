@@ -3,22 +3,26 @@
 ### Boilerplate for automation framework based on Cypress
 
 ### Requirements:
+
 - NodeJS 14+
 
 ### To run tests locally:
+
 ```
 git clone https://github.com/tech-stack-dev/automation-cypress.git
 npm i
 ```
 
 ### Hooks:
+
 - Pre-commit: lint check. To do manually - run
-   ```
-   npm run lint
-   ```
+  ```
+  npm run lint
+  ```
 - Pre-push: N/A
 
 ### Running tests locally
+
 #### To launch cypress:
 
 ```
