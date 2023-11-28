@@ -37,4 +37,6 @@ export default class TopMenu {
     // Example of looking for elements inside parent element using within
     cy.get(locators.menuLocators.FULL.SUBMENU_ITEMS_CONTAINER).within(() => items.forEach((item) => this.#getSubMenuItem(item).should('be.visible')));
   }
+
+  static checkDoesNotExist = () => cy.get(locators.menuLocators.FULL.GENERIC_TOP_MENU_ITEM).should('not.exist');
 }

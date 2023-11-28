@@ -39,4 +39,10 @@ describe('Top menu tests', () => {
     HealthcarePage.refreshAndMockData('GET', url, { fixture: mockDataFile2 });
     HealthcarePage.checkRelatedArticle('The Test Post 2');
   });
+
+  it('Interaction with UI element: complete removing', () => {
+    // Remove Top Menu container element
+    cy.getByDataId('Container-Header').invoke('remove');
+    TopMenu.checkDoesNotExist();
+  });
 });
