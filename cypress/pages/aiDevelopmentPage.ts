@@ -1,17 +1,12 @@
-import locators from '../locators';
+import BasePage from './base/basePage';
 
-export default class AiDevelopmentPage {
+export default class AiDevelopmentPage extends BasePage {
   static #PAGE_TITLE = 'AI Development Services';
 
-  static verifyIsOpened = () =>
-    // example of using validations with a custom logic using should
-    // example of using custom getByDataId method
-    cy.getByDataId(locators.common.PAGE_TITLE_DATAID).should(($title) =>
-      expect(
-        $title
-          .text()
-          .replace(/(?:\r\n|\r|\n)/g, ' ')
-          .trim()
-      ).equals(this.#PAGE_TITLE)
-    );
+  static #URL = 'services/artificial-intelligence';
+
+  static verifyIsOpened = () => {
+    this.verifyTitleText(this.#PAGE_TITLE);
+    this.verifyUrl(this.#URL);
+  };
 }
