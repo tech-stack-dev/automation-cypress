@@ -1,0 +1,36 @@
+{
+  "posts": [
+    {
+      "id": "6549028cd5a3183395bf1876",
+      "uuid": "5d41b5d7-5c2a-4dd7-857d-ac015e59927e",
+      "title": "The Test Post 1",
+      "slug": "the-test-post1",
+      "html": "<p>The Test Post 1</p><hr>",
+      "feature_image": null,
+      "created_at": "2023-11-06T15:13:16.000+00:00",
+      "updated_at": "2023-11-06T15:28:24.000+00:00",
+      "published_at": "2023-11-06T15:14:01.000+00:00",
+      "tags": [],
+      "primary_tag": {
+        "id": "653a32df6b30203a4b3c0f46",
+        "name": "Internet of Things: test 1",
+        "slug": "internet-of-things",
+        "description": "Internet of Things: test 1",
+        "visibility": "public",
+        "url": "https://staging.tech-stack.com/blog/tag/internet-of-things/"
+      },
+      "url": "https://staging.tech-stack.com/blog/devsecops-for-iot-in-healthcare-challenges-integration-tips/",
+      "excerpt": "The test record 1"
+    }
+  ],
+  "meta": {
+    "pagination": {
+      "page": 1,
+      "limit": "all",
+      "pages": 1,
+      "total": 3,
+      "next": null,
+      "prev": null
+    }
+  }
+}
