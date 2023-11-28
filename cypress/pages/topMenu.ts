@@ -25,11 +25,16 @@ export default class TopMenu {
   static clickMenuSubItem = (itemName: string) => this.#getSubMenuItem(itemName).click();
 
   static navigate = (tabName: string, itemName: string) => {
+    // Setup request interceptor without modification of the response before clicking the menu
+    // Request for posts is common for majority of TS web pages
+    cy.intercept('GET', '/blog/ghost/api/v3/content/posts/**').as('postsRequest');
     this.expandCollapseTab(tabName).within(() => this.clickMenuSubItem(itemName));
+    // Wait until request will be responded. Test will be failed if response will not be caught
+    cy.wait('@postsRequest');
   };
 
   static verifySubItemsDisplayed(...items: string[]) {
-    // example of looking for elements inside parent element using within
+    // Example of looking for elements inside parent element using within
     cy.get(locators.menuLocators.FULL.SUBMENU_ITEMS_CONTAINER).within(() => items.forEach((item) => this.#getSubMenuItem(item).should('be.visible')));
   }
 }
